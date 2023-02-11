@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\site\HomeController;
+use App\Http\Controllers\site\ContatoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,28 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('site.home.index');
-});
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/contato', function(){
-    return view('site.pages.contato');
-});
-
-Route::get('/produtos', function(){
-
-    $produtos = [
-        'Celulares',
-        'Notebooks',
-        'Computadores',
-        'Impressoras',
-        'Tablets',
-        'Mesas Digitalizadoras',
-        'Monitores',
-        'Consoles'
-    ];
-
-    return view('site.pages.produtos', [
-        'produtos' => $produtos,
-    ]);
-});
+Route::get('/contato', [ContatoController::class, 'index'])->name('contato');
+Route::post('/contato', [ContatoController::class, 'enviar'])->name('contatoEnviar');
