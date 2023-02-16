@@ -4,7 +4,7 @@
 
 <section>
 
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+    <nav class="navbar navbar-dark bg-primary navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand" href="{{ url('/') }}">InfoDev</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,13 +16,7 @@
                 <a class="nav-link" aria-current="page" href="{{ url('/') }}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" aria-current="page">Sobre</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{{ url('/produtos') }}" aria-current="page">Produtos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{{ url('/contato') }}" aria-current="page">Contato</a>
+                <a class="nav-link" href="{{ url('/eventos') }}" aria-current="page">Eventos</a>
               </li>
             </ul>
           </div>

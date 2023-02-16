@@ -7,18 +7,24 @@
         <title>@yield('title')</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet">
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{asset('site/css/style.css')}}">
 
         <style scoped>
-            main{
-                min-height: 85vh;
-            }
 
-            header{
+            body{
+                font-family: 'Poppins', sans-serif;
+            }
+            /* header{
                 min-height: 10vh;
+            } */
+
+            main{
+                min-height: 95vh;
             }
 
             .bg-dark{
@@ -27,7 +33,7 @@
         </style>
 
     </head>
-    <body>
+    <body class="bg-light">
         <header>
             @include('site.template.menu')
         </header>

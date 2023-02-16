@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,28 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('site.home.index');
-});
-
-Route::get('/contato', function(){
-    return view('site.pages.contato');
-});
-
-Route::get('/produtos', function(){
-
-    $produtos = [
-        'Celulares',
-        'Notebooks',
-        'Computadores',
-        'Impressoras',
-        'Tablets',
-        'Mesas Digitalizadoras',
-        'Monitores',
-        'Consoles'
-    ];
-
-    return view('site.pages.produtos', [
-        'produtos' => $produtos,
-    ]);
-});
+Route::get('/', [HomeController::class, 'index', 'as' => 'home']);
+Route::get('/create', [HomeController::class, 'create', 'as' => 'create']);
