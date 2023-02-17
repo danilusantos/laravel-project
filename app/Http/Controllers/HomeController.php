@@ -9,12 +9,10 @@ class HomeController extends Controller
 {
     public function index(){
 
-        $events = Event::all();
+        $events = Event::all()->where('status', '1');
 
         return view('site.home.index', ['events' => $events]);
     }
 
-    public function create(){
-        return view('site.pages.events.index');
-    }
+
 }

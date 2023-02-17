@@ -20,6 +20,8 @@ class CreateEventsTable extends Migration
             $table->string('city');
             $table->boolean('private');
             $table->boolean('status');
+            $table->string('image');
+            $table->string('slug');
             $table->timestamps();
         });
     }

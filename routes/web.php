@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\EventsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,15 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', [HomeController::class, 'index', 'as' => 'home']);
-Route::get('/create', [HomeController::class, 'create', 'as' => 'create']);
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('/events', [EventsController::class, 'index'])->name('events');
+
+Route::get('/events/create', [EventsController::class, 'create'])->name('createEvent');
+Route::post('/events', [EventsController::class, 'store'])->name('storeEvent');
+
+Route::get('/events/{slug}', [EventsController::class, 'show'])->name('showEvent');
+
+
+
+

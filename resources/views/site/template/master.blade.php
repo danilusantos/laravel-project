@@ -13,38 +13,16 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{asset('site/css/style.css')}}">
-
-        <style scoped>
-
-            body{
-                font-family: 'Poppins', sans-serif;
-            }
-            /* header{
-                min-height: 10vh;
-            } */
-
-            main{
-                min-height: 95vh;
-            }
-
-            .bg-dark{
-                color: white;
-            }
-        </style>
+        <link rel="stylesheet" href="{{asset('site/css/site.css')}}">
 
     </head>
     <body class="bg-light">
-        <header>
+
             @include('site.template.menu')
-        </header>
 
-        <main>
             @yield('content')
-        </main>
 
-        <footer>
             @include('site.template.footer')
-        </footer>
 
     <!-- Scripts -->
     <script src="{{ asset('site/js/jquery.js') }}"></script>

@@ -3,31 +3,14 @@
 @section('title', 'Página Inicial')
 
 @section('content')
-    <div class="p-3 d-flex align-items-end justify-content-end">
-        <a href="/create">
-            <button class="btn btn-primary btn-principal" id="btnAbrirModal">
-                Criar Evento
-            </button>
-        </a>
-    </div>
+<main class="bg-dark text-white d-flex align-items-center justify-content-center flex-column">
 
-    <div class="container">
-        <h3 class="text-center">Eventos</h3>
-        <div class="">
-            <div class="d-flex align-items-stretch flex-wrap justify-content-center">
-                @foreach ($events as $event)
-                    <div class="card m-3" style="width: 20rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $event->title }}</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">{{ $event->description }}</h6>
-                            <p class="card-text">{{ $event->city }}</p>
-                            <a href="#" class="card-link">Card link</a>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
+    <h1>InfoDev</h1>
+    <h3>Seu site para criação de eventos</h3>
+    <a href="{{route('events')}}">
+        <button class="btn btn-outline-light btn-lg">Eventos Disponíveis</button>
+    </a>
 
-    </div>
+</main>
 
 @endsection

@@ -16,6 +16,8 @@ class Event extends Model
         'description',
         'city',
         'private',
-        'status'
+        'status',
+        'slug',
+        'image'
     ];
 }
